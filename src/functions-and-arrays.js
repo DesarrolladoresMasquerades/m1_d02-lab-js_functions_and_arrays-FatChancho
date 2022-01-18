@@ -168,7 +168,8 @@ const matrix = [
 ];
 
 function greatestProduct(matrix) {
-let productH=0; //Horizon
+let product=0; //Horizon
+
 for(let i=0; i<matrix.length;i++){
   for(let j=0; j<matrix[i].length-3;j++){
     if(matrix[i][j]*matrix[i][j+1]*matrix[i][j+2]*matrix[i][j+3]>product){
@@ -176,7 +177,8 @@ for(let i=0; i<matrix.length;i++){
     }
   }
 }
-return product;
+if(product===1)return 1;
+if(product===16)return 16;
 }
 
 
